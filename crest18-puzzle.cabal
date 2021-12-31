@@ -1,0 +1,74 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: fdfdb8b41e294c2d6dfcd1820c4f6b52e41a2704ae5f7f7bea05541ea3af053e
+
+name:           crest18-puzzle
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/DKurilo/crest18-puzzle#readme>
+homepage:       https://github.com/DKurilo/crest18-puzzle#readme
+bug-reports:    https://github.com/DKurilo/crest18-puzzle/issues
+author:         Dima Kurilo
+maintainer:     dkurilo@gmail.com
+copyright:      Dima Kurilo
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/DKurilo/crest18-puzzle
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_crest18_puzzle
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7
+    , containers
+    , deepseq >=1.4
+    , monad-par >=0.3
+    , vector >=0.12
+  default-language: Haskell2010
+
+executable crest18-puzzle
+  main-is: Main.hs
+  other-modules:
+      Paths_crest18_puzzle
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7
+    , containers
+    , crest18-puzzle
+    , deepseq >=1.4
+    , monad-par >=0.3
+    , vector >=0.12
+  default-language: Haskell2010
+
+test-suite crest18-puzzle-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_crest18_puzzle
+  hs-source-dirs:
+      test
+  ghc-options: -O3 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7
+    , containers
+    , crest18-puzzle
+    , deepseq >=1.4
+    , monad-par >=0.3
+    , vector >=0.12
+  default-language: Haskell2010

@@ -1,0 +1,53 @@
+name:                crest18-puzzle
+version:             0.1.0.0
+github:              "DKurilo/crest18-puzzle"
+license:             BSD3
+author:              "Dima Kurilo"
+maintainer:          "dkurilo@gmail.com"
+copyright:           "Dima Kurilo"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/DKurilo/crest18-puzzle#readme>
+
+dependencies:
+- base >= 4.7
+- vector >= 0.12
+- monad-par >= 0.3
+- deepseq >= 1.4
+- containers
+
+library:
+  source-dirs: src
+
+executables:
+  crest18-puzzle:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - crest18-puzzle
+
+tests:
+  crest18-puzzle-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -O3
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - crest18-puzzle
