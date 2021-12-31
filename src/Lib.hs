@@ -12,7 +12,6 @@ import Control.Monad.Par
 import Data.List (delete)
 import qualified Data.Set as S
 import Data.Vector (Vector (..), fromList, (!))
-import Debug.Trace
 import GHC.Generics (Generic)
 
 data Place = E | F deriving (Eq, Show, Generic, NFData)
@@ -331,8 +330,8 @@ tryPossible (State crest ps parts placeds) (x, y, z) (Placed part@(Part n _) _ _
     _ -> return []
 
 findAllPossible :: State -> Par [State]
-findAllPossible s@(State _ _ [] _) = trace (show s) $ return [s]
-findAllPossible s@(State _ [] _ _) = trace (show s) $ return [s]
+findAllPossible s@(State _ _ [] _) = return [s]
+findAllPossible s@(State _ [] _ _) = return [s]
 findAllPossible (State crest ps (part@(Part 7 _) : parts) placeds) | (3, 0, 2) `elem` ps = do
   let ps' = filter (/= (3, 0, 2)) ps
       go placed = tryPossible (State crest ps' parts ((placed, 3, 0, 2) : placeds)) (3, 0, 2) placed
