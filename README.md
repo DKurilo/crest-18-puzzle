@@ -30,5 +30,5 @@ I didn't try varaiants 127-138.
 
 ## How to read variants
 
-Check [photo](./crest-18-puzzle.png), so top, left and right are just as it's on the image. And numbers are from [this image](./parts.jpg).  
+Check [image](./crest-18-puzzle.png), so top, left and right are just as it's on the image. And numbers are from [this image](./parts.jpg).  
 So A0, A1, A2, A3 and A4 are angles. A0 is no rotation. A1 90 clockwise and so on.
