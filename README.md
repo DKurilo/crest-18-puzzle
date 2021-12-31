@@ -1,14 +1,16 @@
 # crest18-puzzle
 This is repository to solve puzzle that is crest from 18 sticks.  
-Here is solved puzzle:  
+
+## Solved puzzle
 ![Solved 18 parts crest](./solved.jpg "Solved 18 parts crest puzzle")
 
-And these are parts:  
+## Parts
 ![Parts](./parts.jpg "Parts")
 
 On the image with parts parts without number (second rows) should have number 17 on them.  
 For each part there is (n+8) on the other side.  
 
+## Results
 File [result.txt](./result.txt) contains all results program found. And proper result is `Variant 126`:
 ```
 Variant: 126
@@ -25,3 +27,8 @@ Right
 End
 ```
 I didn't try varaiants 127-138.
+
+## How to read variants
+
+Check [photo](./crest-18-puzzle.png), so top, left and right are just as it's on the image. And numbers are from [this image](./parts.jpg).  
+So A0, A1, A2, A3 and A4 are angles. A0 is no rotation. A1 90 clockwise and so on.
