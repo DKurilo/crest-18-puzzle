@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fdfdb8b41e294c2d6dfcd1820c4f6b52e41a2704ae5f7f7bea05541ea3af053e
+-- hash: e250a174fe02fdb5b0d2122d5b847b3191aba6a02b90ea3cccf97afa05cd7052
 
 name:           crest18-puzzle
 version:        0.1.0.0
@@ -63,7 +63,7 @@ test-suite crest18-puzzle-test
       Paths_crest18_puzzle
   hs-source-dirs:
       test
-  ghc-options: -O3 -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -O2 -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7
     , containers
